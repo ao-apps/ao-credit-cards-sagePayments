@@ -48,11 +48,11 @@ import junit.framework.TestSuite;
  *
  * @author  AO Industries, Inc.
  */
-public class SagePaymentsTest extends TestCase {
+public class SagePaymentsTestTODO extends TestCase {
 
 	private static Properties config;
 	synchronized private static String getConfig(String name) throws IOException {
-		if(config==null) config = PropertiesUtils.loadFromResource(SagePaymentsTest.class, "SagePaymentsTest.properties");
+		if(config==null) config = PropertiesUtils.loadFromResource(SagePaymentsTestTODO.class, "SagePaymentsTest.properties");
 		return config.getProperty(name);
 	}
 
@@ -61,7 +61,7 @@ public class SagePaymentsTest extends TestCase {
 	private Group group;
 	private CreditCard testCard;
 
-	public SagePaymentsTest(String testName) {
+	public SagePaymentsTestTODO(String testName) {
 		super(testName);
 	}
 
@@ -147,7 +147,7 @@ public class SagePaymentsTest extends TestCase {
 	}
 
 	public static Test suite() {
-		TestSuite suite = new TestSuite(SagePaymentsTest.class);
+		TestSuite suite = new TestSuite(SagePaymentsTestTODO.class);
 		return suite;
 	}
 
