@@ -1,5 +1,5 @@
 # [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://www.aoindustries.com/) [AO Credit Cards](https://www.aoindustries.com/ao-credit-cards/) / [Sage Payment Solutions](https://www.aoindustries.com/ao-credit-cards/sagePayments/)
-Provider for Sage Payment Solutions.
+Provider for [Sage Payment Solutions](http://www.sage.com/us/sage-payment-solutions).
 
 ## Project Links
 * [Project Home](https://www.aoindustries.com/ao-credit-cards/sagePayments/)
