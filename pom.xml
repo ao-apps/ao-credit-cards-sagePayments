@@ -89,6 +89,8 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 	</div>
 </div>]]>
 								</top>
+								<!-- Exclude generated SOAP client -->
+								<excludePackageNames>com.aoindustries.creditcards.sagePayments.*</excludePackageNames>
 								<links>
 									<link>https://www.aoindustries.com/ao-credit-cards/api/apidocs/</link>
 									<link>https://www.aoindustries.com/aocode-public/apidocs/</link>
