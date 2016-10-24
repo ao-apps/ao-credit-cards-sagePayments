@@ -38,8 +38,6 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 	<properties>
 		<bookPath>/${project.parent.artifactId}/sagePayments</bookPath>
 		<shortTitle>Sage Payment Solutions</shortTitle>
-		<javadoc.breadcrumbs><![CDATA[<a target="_top" href="${project.parent.url}">${project.parent.name}</a>
-/ <a target="_top" href="${project.url}">${shortTitle}</a>]]></javadoc.breadcrumbs>
 		<description.html><![CDATA[Provider for the <a target="_top" href="http://www.sage.com/us/sage-payment-solutions">Sage Payment Solutions</a>.]]></description.html>
 	</properties>
 
