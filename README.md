@@ -3,6 +3,7 @@ Provider for [Sage Payment Solutions](http://www.sage.com/us/sage-payment-soluti
 
 ## Project Links
 * [Project Home](https://www.aoindustries.com/ao-credit-cards/sagePayments/)
+* [Changelog](https://www.aoindustries.com/ao-credit-cards/sagePayments/changelog)
 * [API Docs](https://www.aoindustries.com/ao-credit-cards/sagePayments/apidocs/)
 * [Maven Central Repository](https://search.maven.org/#search%7Cgav%7C1%7Cg:%22com.aoindustries%22%20AND%20a:%22ao-credit-cards-sagePayments%22)
 * [GitHub](https://github.com/aoindustries/ao-credit-cards-sagePayments)
