@@ -36,13 +36,12 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 	<packaging>jar</packaging>
 
 	<properties>
-		<bookPath>/${project.parent.artifactId}/sagePayments</bookPath>
 		<shortTitle>Sage Payment Solutions</shortTitle>
 		<description.html><![CDATA[Provider for the <a target="_top" href="http://www.sage.com/us/sage-payment-solutions">Sage Payment Solutions</a>.]]></description.html>
 	</properties>
 
 	<name>AO Credit Cards Sage Payment Solutions</name>
-	<url>https://aoindustries.com${bookPath}/</url><!-- Can't inherit due to multi-module -->
+	<url>https://aoindustries.com/${project.parent.artifactId}/sagePayments/</url>
 	<description>Provider for Sage Payment Solutions.</description>
 	<inceptionYear>2007</inceptionYear>
 
