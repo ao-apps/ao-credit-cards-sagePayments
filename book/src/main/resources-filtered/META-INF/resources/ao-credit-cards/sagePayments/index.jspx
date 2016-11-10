@@ -38,7 +38,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 		<core:child page="changelog.jspx" />
 		<core:child page="apidocs/index.jspx" />
 		<p>
-			@{description.html}
+			Provider for the <ao:a href="http://www.sage.com/us/sage-payment-solutions">Sage Payment Solutions</ao:a>.
 		</p>
 		<section:section label="Project Links">
 			<ul>
