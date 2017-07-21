@@ -69,6 +69,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 								<!-- Exclude generated SOAP client -->
 								<excludePackageNames>com.aoindustries.creditcards.sagePayments.*</excludePackageNames>
 								<links>
+									<link>${javac.link.javaApi}</link>
 									<link>https://aoindustries.com/ao-credit-cards/api/apidocs/</link>
 									<link>https://aoindustries.com/ao-lang/apidocs/</link>
 								</links>
