@@ -33,7 +33,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 
 	<groupId>com.aoindustries</groupId>
 	<artifactId>ao-credit-cards-sagePayments</artifactId>
-	<version>1.0.4-SNAPSHOT</version>
+	<version>1.0.4-validation-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -100,7 +100,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 		<dependency>
 			<groupId>com.aoindustries</groupId>
 			<artifactId>ao-credit-cards-api</artifactId>
-			<version>1.0.3</version>
+			<version>1.0.4-validation-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.aoindustries</groupId>
