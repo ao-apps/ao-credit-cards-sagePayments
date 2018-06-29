@@ -56,22 +56,20 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 		<profile>
 			<id>release</id>
 			<build>
-				<pluginManagement>
-					<plugins>
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId><artifactId>maven-javadoc-plugin</artifactId>
-							<configuration>
-								<!-- Exclude generated SOAP client -->
-								<excludePackageNames>com.aoindustries.creditcards.sagePayments.*</excludePackageNames>
-								<links>
-									<link>${javac.link.javaApi}</link>
-									<link>https://aoindustries.com/ao-credit-cards/api/apidocs/</link>
-									<link>https://aoindustries.com/ao-lang/apidocs/</link>
-								</links>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId><artifactId>maven-javadoc-plugin</artifactId>
+						<configuration>
+							<!-- Exclude generated SOAP client -->
+							<excludePackageNames>com.aoindustries.creditcards.sagePayments.*</excludePackageNames>
+							<links>
+								<link>${javac.link.javaApi}</link>
+								<link>https://aoindustries.com/ao-credit-cards/api/apidocs</link>
+								<link>https://aoindustries.com/ao-lang/apidocs</link>
+							</links>
+						</configuration>
+					</plugin>
+				</plugins>
 			</build>
 		</profile>
 	</profiles>
