@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ao-credit-cards-sagePayments - Provider for Sage Payment Solutions.
-Copyright (C) 2016, 2017, 2018  AO Industries, Inc.
+Copyright (C) 2016, 2017, 2018, 2019  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -64,8 +64,8 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 							<excludePackageNames>com.aoindustries.creditcards.sagePayments.*</excludePackageNames>
 							<links>
 								<link>${javac.link.javaApi}</link>
-								<link>https://aoindustries.com/ao-credit-cards/api/apidocs</link>
-								<link>https://aoindustries.com/ao-lang/apidocs</link>
+								<link>https://aoindustries.com/ao-credit-cards/api/apidocs/</link>
+								<link>https://aoindustries.com/ao-lang/apidocs/</link>
 							</links>
 						</configuration>
 					</plugin>
