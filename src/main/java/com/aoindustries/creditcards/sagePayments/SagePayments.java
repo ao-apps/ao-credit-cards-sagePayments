@@ -1,6 +1,6 @@
 /*
  * ao-credit-cards - Credit card processing API supporting multiple payment gateways.
- * Copyright (C) 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2016  AO Industries, Inc.
+ * Copyright (C) 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2019  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -27,7 +27,6 @@ import com.aoindustries.creditcards.AuthorizationResult;
 import com.aoindustries.creditcards.CaptureResult;
 import com.aoindustries.creditcards.CreditCard;
 import com.aoindustries.creditcards.CreditResult;
-import com.aoindustries.io.LocalizedIOException;
 import com.aoindustries.creditcards.MerchantServicesProvider;
 import com.aoindustries.creditcards.SaleResult;
 import com.aoindustries.creditcards.Transaction;
@@ -37,7 +36,7 @@ import com.aoindustries.creditcards.VoidResult;
 import com.aoindustries.creditcards.sagePayments.transaction_processing.TRANSACTION_PROCESSINGLocator;
 import com.aoindustries.creditcards.sagePayments.wsVault.WsVaultLocator;
 import com.aoindustries.creditcards.sagePayments.wsVaultBankcard.WsVaultBankcardLocator;
-import com.aoindustries.lang.NotImplementedException;
+import com.aoindustries.io.LocalizedIOException;
 import java.io.IOException;
 import java.rmi.RemoteException;
 import java.util.logging.Level;
@@ -552,8 +551,9 @@ public class SagePayments implements MerchantServicesProvider {
 	}
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public CaptureResult capture(AuthorizationResult authorizationResult) {
-		throw new NotImplementedException();
+		throw new com.aoindustries.lang.NotImplementedException();
 	}
 
 	@Override
@@ -635,16 +635,7 @@ public class SagePayments implements MerchantServicesProvider {
 				providerErrorMessage,
 				reference
 			);
-		} catch(ServiceException err) {
-			return new VoidResult(
-				transaction.getProviderId(),
-				TransactionResult.CommunicationResult.LOCAL_ERROR,
-				err.getClass().getName(),
-				TransactionResult.ErrorCode.ERROR_TRY_AGAIN,
-				err.getMessage(),
-				null
-			);
-		} catch(RemoteException err) {
+		} catch(ServiceException | RemoteException err) {
 			return new VoidResult(
 				transaction.getProviderId(),
 				TransactionResult.CommunicationResult.LOCAL_ERROR,
@@ -657,8 +648,9 @@ public class SagePayments implements MerchantServicesProvider {
 	}
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public CreditResult credit(TransactionRequest transactionRequest, CreditCard creditCard) {
-		throw new NotImplementedException();
+		throw new com.aoindustries.lang.NotImplementedException();
 	}
 
 	@Override
@@ -668,9 +660,7 @@ public class SagePayments implements MerchantServicesProvider {
 				emptyStringIfNull(merchantId),
 				emptyStringIfNull(merchantKey)
 			);
-		} catch(ServiceException err) {
-			throw new LocalizedIOException(err, accessor, "MerchantServicesProvider.canStoreCreditCards.ioException");
-		} catch(RemoteException err) {
+		} catch(ServiceException | RemoteException err) {
 			throw new LocalizedIOException(err, accessor, "MerchantServicesProvider.canStoreCreditCards.ioException");
 		}
 	}
@@ -710,9 +700,7 @@ public class SagePayments implements MerchantServicesProvider {
 				else throw new LocalizedIOException(accessor, "MerchantServicesProvider.storeCreditCard.missingProviderUniqueId");
 			}
 			return guid;
-		} catch(ServiceException err) {
-			throw new IOException(err);
-		} catch(RemoteException err) {
+		} catch(ServiceException | RemoteException err) {
 			throw new IOException(err);
 		}
 	}
@@ -764,9 +752,7 @@ public class SagePayments implements MerchantServicesProvider {
 			if("UNABLE TO VERIFY VAULT SERVICE".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardNumberAndExpiration.notSupported");
 			if("INVALID CARDNUMBER".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardNumberAndExpiration.invalidCardNumber");
 			if(!"SUCCESS".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardNumberAndExpiration.unexpectedResponse", message);
-		} catch(ServiceException err) {
-			throw new IOException(err);
-		} catch(RemoteException err) {
+		} catch(ServiceException | RemoteException err) {
 			throw new IOException(err);
 		}
 	}
@@ -806,9 +792,7 @@ public class SagePayments implements MerchantServicesProvider {
 			if(!"true".equals(success)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardExpiration.notSuccessful");
 			if("UNABLE TO LOCATE".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardExpiration.unableToLocate");
 			if(!"SUCCESS".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardExpiration.unexpectedResponse", message);
-		} catch(ServiceException err) {
-			throw new IOException(err);
-		} catch(RemoteException err) {
+		} catch(ServiceException | RemoteException err) {
 			throw new IOException(err);
 		}
 	}
@@ -822,9 +806,7 @@ public class SagePayments implements MerchantServicesProvider {
 				emptyStringIfNull(creditCard.getProviderUniqueId())
 			);
 			if(!success) throw new LocalizedIOException(accessor, "MerchantServicesProvider.deleteCreditCard.notSuccessful");
-		} catch(ServiceException err) {
-			throw new IOException(err);
-		} catch(RemoteException err) {
+		} catch(ServiceException | RemoteException err) {
 			throw new IOException(err);
 		}
 	}
