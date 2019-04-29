@@ -1,10 +1,10 @@
 # [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://github.com/aoindustries) [AO Credit Cards](https://github.com/aoindustries/ao-credit-cards) / [Sage Payment Solutions](https://github.com/aoindustries/ao-credit-cards-sagePayments)
 <p>
-	<a href="https://aoindustries.com/life-cycle#project-current-stable">
-		<img src="https://aoindustries.com/ao-badges/project-current-stable.svg" alt="project: current stable" />
+	<a href="https://aoindustries.com/life-cycle#project-old-stable">
+		<img src="https://aoindustries.com/ao-badges/project-old-stable.svg" alt="project: old stable" />
 	</a>
-	<a href="https://aoindustries.com/life-cycle#management-production">
-		<img src="https://aoindustries.com/ao-badges/management-production.svg" alt="management: production" />
+	<a href="https://aoindustries.com/life-cycle#management-migration">
+		<img src="https://aoindustries.com/ao-badges/management-migration.svg" alt="management: migration" />
 	</a>
 	<a href="https://aoindustries.com/life-cycle#packaging-active">
 		<img src="https://aoindustries.com/ao-badges/packaging-active.svg" alt="packaging: active" />
