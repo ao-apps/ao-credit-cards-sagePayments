@@ -216,6 +216,9 @@ public class SagePayments implements MerchantServicesProvider {
 				null,
 				null,
 				null,
+				null,
+				null,
+				null,
 				null
 			);
 		}
@@ -305,7 +308,7 @@ public class SagePayments implements MerchantServicesProvider {
 							emptyStringIfNull(creditCard.getCountryCode()),
 							emptyStringIfNull(creditCard.getEmail()),
 							emptyStringIfNull(creditCard.getCardNumber()),
-							emptyStringIfNull(creditCard.getExpirationDateMMYY()),
+							emptyStringIfNull(creditCard.getExpirationDateMMYY(false)),
 							emptyStringIfNull(creditCard.getCardCode()),
 							emptyStringIfNull(null),
 							// TODO: Should amount be the total, or just the part before adding shipping, tax, duty???
@@ -333,7 +336,7 @@ public class SagePayments implements MerchantServicesProvider {
 							emptyStringIfNull(creditCard.getCountryCode()),
 							emptyStringIfNull(creditCard.getEmail()),
 							emptyStringIfNull(creditCard.getCardNumber()),
-							emptyStringIfNull(creditCard.getExpirationDateMMYY()),
+							emptyStringIfNull(creditCard.getExpirationDateMMYY(false)),
 							emptyStringIfNull(creditCard.getCardCode()),
 							emptyStringIfNull(null),
 							// TODO: Should amount be the total, or just the part before adding shipping, tax, duty???
@@ -497,6 +500,9 @@ public class SagePayments implements MerchantServicesProvider {
 				providerUniqueId,
 				null,
 				null,
+				null,
+				null,
+				null,
 				providerApprovalResult,
 				approvalResult,
 				providerDeclineReason,
@@ -530,6 +536,9 @@ public class SagePayments implements MerchantServicesProvider {
 				null,
 				null,
 				null,
+				null,
+				null,
+				null,
 				null
 			);
 		} catch(RemoteException err) {
@@ -540,6 +549,9 @@ public class SagePayments implements MerchantServicesProvider {
 				err.getClass().getName(),
 				TransactionResult.ErrorCode.ERROR_TRY_AGAIN,
 				err.getMessage(),
+				null,
+				null,
+				null,
 				null,
 				null,
 				null,
@@ -685,7 +697,7 @@ public class SagePayments implements MerchantServicesProvider {
 					emptyStringIfNull(merchantId),
 					emptyStringIfNull(merchantKey),
 					emptyStringIfNull(creditCard.getCardNumber()),
-					emptyStringIfNull(creditCard.getExpirationDateMMYY())
+					emptyStringIfNull(creditCard.getExpirationDateMMYY(false))
 				).get_any();
 
 				Node table1 = results[results.length-1].getFirstChild().getFirstChild();
@@ -740,7 +752,7 @@ public class SagePayments implements MerchantServicesProvider {
 					emptyStringIfNull(merchantKey),
 					emptyStringIfNull(creditCard.getProviderUniqueId()),
 					emptyStringIfNull(cardNumber),
-					emptyStringIfNull(CreditCard.getExpirationDateMMYY(expirationMonth, expirationYear))
+					emptyStringIfNull(CreditCard.getExpirationDateMMYY(expirationMonth, expirationYear, false))
 				).get_any();
 				Node table1 = results[results.length-1].getFirstChild().getFirstChild();
 				Node child = table1.getFirstChild();
@@ -781,7 +793,7 @@ public class SagePayments implements MerchantServicesProvider {
 					emptyStringIfNull(merchantId),
 					emptyStringIfNull(merchantKey),
 					emptyStringIfNull(creditCard.getProviderUniqueId()),
-					emptyStringIfNull(CreditCard.getExpirationDateMMYY(expirationMonth, expirationYear))
+					emptyStringIfNull(CreditCard.getExpirationDateMMYY(expirationMonth, expirationYear, false))
 				).get_any();
 				Node table1 = results[results.length-1].getFirstChild().getFirstChild();
 				Node child = table1.getFirstChild();
