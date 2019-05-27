@@ -37,7 +37,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-29T19:06:35-0500"
-		dateModified="2019-04-29T18:24:39-0500"
+		dateModified="2019-05-26T19:30:41-0500"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.aoindustries:ao-credit-cards-sagePayments:pom.version}" />
@@ -56,7 +56,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 				<ul>
 					<li>Minimum Java version changed from 1.6 to 1.7.</li>
 					<li>
-						<strong>This project has been deprecated.</strong>.
+						<strong>This project has been deprecated.</strong>
 						This is the final release and will not be included in future releases.
 						If you ever need to use this in the future, please
 						<ao:a href="https://aoindustries.com/contact">Contact Us</ao:a> -
