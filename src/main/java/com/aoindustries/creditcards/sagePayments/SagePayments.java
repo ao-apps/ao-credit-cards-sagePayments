@@ -218,10 +218,6 @@ public class SagePayments implements MerchantServicesProvider {
 				null,
 				null,
 				null,
-				null,
-				null,
-				null,
-				null,
 				null
 			);
 		}
@@ -502,10 +498,6 @@ public class SagePayments implements MerchantServicesProvider {
 				providerErrorMessage,
 				providerUniqueId,
 				null,
-				null,
-				null,
-				null,
-				null,
 				providerApprovalResult,
 				approvalResult,
 				providerDeclineReason,
@@ -538,10 +530,6 @@ public class SagePayments implements MerchantServicesProvider {
 				null,
 				null,
 				null,
-				null,
-				null,
-				null,
-				null,
 				null
 			);
 		} catch(RemoteException err) {
@@ -552,10 +540,6 @@ public class SagePayments implements MerchantServicesProvider {
 				err.getClass().getName(),
 				TransactionResult.ErrorCode.ERROR_TRY_AGAIN,
 				err.getMessage(),
-				null,
-				null,
-				null,
-				null,
 				null,
 				null,
 				null,
