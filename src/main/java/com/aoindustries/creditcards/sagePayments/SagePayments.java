@@ -29,6 +29,7 @@ import com.aoindustries.creditcards.CreditCard;
 import com.aoindustries.creditcards.CreditResult;
 import com.aoindustries.creditcards.MerchantServicesProvider;
 import com.aoindustries.creditcards.SaleResult;
+import com.aoindustries.creditcards.TokenizedCreditCard;
 import com.aoindustries.creditcards.Transaction;
 import com.aoindustries.creditcards.TransactionRequest;
 import com.aoindustries.creditcards.TransactionResult;
@@ -38,7 +39,9 @@ import com.aoindustries.creditcards.sagePayments.wsVault.WsVaultLocator;
 import com.aoindustries.creditcards.sagePayments.wsVaultBankcard.WsVaultBankcardLocator;
 import com.aoindustries.io.LocalizedIOException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.rmi.RemoteException;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.rpc.ServiceException;
@@ -829,6 +832,16 @@ public class SagePayments implements MerchantServicesProvider {
 		} catch(ServiceException | RemoteException err) {
 			throw new IOException(err);
 		}
+	}
+
+	@Override
+	public boolean canGetTokenizedCreditCards() {
+		return false;
+	}
+
+	@Override
+	public Map<String, TokenizedCreditCard> getTokenizedCreditCards(Map<String,CreditCard> persistedCards, PrintWriter verboseOut, PrintWriter infoOut, PrintWriter warningOut) throws UnsupportedOperationException {
+		throw new UnsupportedOperationException();
 	}
 
 	/*
