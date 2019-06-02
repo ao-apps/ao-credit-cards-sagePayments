@@ -67,6 +67,8 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 								<!-- Direct -->
 								<link>https://aoindustries.com/ao-credit-cards/api/apidocs/</link>
 								<link>https://aoindustries.com/ao-lang/apidocs/</link>
+								<!-- No apidocs: <groupId>org.apache.axis</groupId><artifactId>axis</artifactId> -->
+								<!-- No apidocs: <groupId>org.apache.axis</groupId><artifactId>axis-jaxrpc</artifactId> -->
 							</links>
 						</configuration>
 					</plugin>
