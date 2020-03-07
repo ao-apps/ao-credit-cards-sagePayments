@@ -35,8 +35,6 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 	<properties>
 		<!-- These values are copied from the project being documented -->
 		<documented.artifactId>ao-credit-cards-sagePayments</documented.artifactId>
-		<documented.javaVersion>1.8</documented.javaVersion>
-		<documented.javac.link.javaApi>${javac.link.javaApi.jdk8}</documented.javac.link.javaApi>
 		<documented.name>AO Credit Cards Sage Payment Solutions</documented.name>
 		<documented.shortTitle>Sage Payment Solutions</documented.shortTitle>
 		<documented.description>Provider for Sage Payment Solutions.</documented.description>
