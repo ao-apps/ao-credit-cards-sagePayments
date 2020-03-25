@@ -37,6 +37,8 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 / <a target="_top" href="${project.url}">${shortTitle}</a>]]></javadoc.breadcrumbs>
 		<shortTitle>Sage Payment Solutions</shortTitle>
 		<description.html><![CDATA[Provider for the <a target="_top" href="http://www.sage.com/us/sage-payment-solutions">Sage Payment Solutions</a>.]]></description.html>
+		<!-- Dependencies -->
+		<org.apache.commons:commons-lang3:version>3.9</org.apache.commons:commons-lang3:version>
 	</properties>
 
 	<name>AO Credit Cards Sage Payment Solutions</name>
@@ -69,6 +71,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 								<link>https://aoindustries.com/ao-lang/apidocs/</link>
 								<link>https://axis.apache.org/axis/java/apiDocs/</link>
 								<!-- Same link for <groupId>org.apache.axis</groupId><artifactId>axis-jaxrpc</artifactId>: <link>https://axis.apache.org/axis/java/apiDocs/</link> -->
+								<link>https://commons.apache.org/proper/commons-lang/javadocs/api-${org.apache.commons:commons-lang3:version}/</link>
 							</links>
 						</configuration>
 					</plugin>
@@ -96,6 +99,9 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 			<dependency>
 				<groupId>org.apache.axis</groupId><artifactId>axis-jaxrpc</artifactId><version>1.4</version>
 			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId><artifactId>commons-lang3</artifactId><version>${org.apache.commons:commons-lang3:version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -117,6 +123,9 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 		</dependency>
 		<dependency>
 			<groupId>org.apache.axis</groupId><artifactId>axis-jaxrpc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId><artifactId>commons-lang3</artifactId>
 		</dependency>
 	</dependencies>
 </project>
