@@ -47,7 +47,6 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 	<inceptionYear>2007</inceptionYear>
 
 	<scm>
-		<!-- Can't inherit due to multi-module -->
 		<connection>scm:git:git://github.com/aoindustries/ao-credit-cards-sagePayments.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/ao-credit-cards-sagePayments.git</developerConnection>
 		<url>https://github.com/aoindustries/ao-credit-cards-sagePayments</url>
