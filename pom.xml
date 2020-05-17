@@ -76,6 +76,8 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 								<link>https://axis.apache.org/axis/java/apiDocs/</link>
 								<!-- Same link for <groupId>org.apache.axis</groupId><artifactId>axis-jaxrpc</artifactId>: <link>https://axis.apache.org/axis/java/apiDocs/</link> -->
 								<link>https://commons.apache.org/proper/commons-lang/javadocs/api-${org.apache.commons.commons-lang3.version}/</link>
+								<!-- Test Direct -->
+								<link>https://junit.org/junit4/javadoc/latest/</link>
 							</links>
 						</configuration>
 					</plugin>
