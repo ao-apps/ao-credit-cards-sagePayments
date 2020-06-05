@@ -105,10 +105,6 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 							<!-- Exclude generated SOAP client -->
 							<excludePackageNames>com.aoindustries.creditcards.sagePayments.*</excludePackageNames>
 							<offlineLinks>
-								<offlineLink>
-									<url>${javadoc.link.javase}</url>
-									<location>${project.build.directory}/offlineLinks/com/aoindustries/javadoc/offline/javase/${javase.release}</location>
-								</offlineLink>
 								<!-- Direct -->
 								<offlineLink>
 									<url>https://aoindustries.com/ao-credit-cards/api/apidocs/</url>
@@ -131,6 +127,11 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 								<offlineLink>
 									<url>https://junit.org/junit4/javadoc/latest/</url>
 									<location>${project.build.directory}/offlineLinks/junit/junit</location>
+								</offlineLink>
+								<!-- Java SE -->
+								<offlineLink>
+									<url>${javadoc.link.javase}</url>
+									<location>${project.build.directory}/offlineLinks/com/aoindustries/javadoc/offline/javase/${javase.release}</location>
 								</offlineLink>
 							</offlineLinks>
 						</configuration>
