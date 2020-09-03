@@ -1,6 +1,6 @@
 /*
  * ao-credit-cards-sagePayments - Provider for Sage Payment Solutions.
- * Copyright (C) 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2019  AO Industries, Inc.
+ * Copyright (C) 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2019, 2020  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -48,6 +48,7 @@ import junit.framework.TestSuite;
  *
  * @author  AO Industries, Inc.
  */
+@SuppressWarnings("UseOfSystemOutOrSystemErr")
 public class SagePaymentsTestTODO extends TestCase {
 
 	private static Properties config;
@@ -86,10 +87,9 @@ public class SagePaymentsTestTODO extends TestCase {
 				return getName();
 			}
 			@Override
+			@SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
 			public boolean equals(Object obj) {
-				if(obj==null) return false;
-				if(getClass()!=obj.getClass()) return false;
-				return this==obj;
+				return super.equals(obj);
 			}
 		};
 		group = new Group() {
@@ -230,7 +230,7 @@ public class SagePaymentsTestTODO extends TestCase {
 	/**
 	 * Test a sale with a stored card.
 	 */
-	public void testStoredCardSale() throws SQLException, IOException {
+	public void testStoredCardSale() throws CloneNotSupportedException, SQLException, IOException {
 		CreditCard creditCard = testCard.clone();
 
 		// Test storeCreditCard
