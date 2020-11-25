@@ -700,7 +700,7 @@ public class SagePayments implements MerchantServicesProvider {
 				//System.out.println("message="+message);
 			}
 
-			if(!"true".equals(success)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.storeCreditCard.notSuccessful");
+			if(!Boolean.parseBoolean(success)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.storeCreditCard.notSuccessful");
 			if(guid==null) {
 				if("UNABLE TO VERIFY VAULT SERVICE".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.storeCreditCard.notSupported");
 				else throw new LocalizedIOException(accessor, "MerchantServicesProvider.storeCreditCard.missingProviderUniqueId");
@@ -754,7 +754,7 @@ public class SagePayments implements MerchantServicesProvider {
 				//System.out.println("message="+message);
 			}
 
-			if(!"true".equals(success)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardNumberAndExpiration.notSuccessful");
+			if(!Boolean.parseBoolean(success)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardNumberAndExpiration.notSuccessful");
 			if("UNABLE TO VERIFY VAULT SERVICE".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardNumberAndExpiration.notSupported");
 			if("INVALID CARDNUMBER".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardNumberAndExpiration.invalidCardNumber");
 			if(!"SUCCESS".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardNumberAndExpiration.unexpectedResponse", message);
@@ -795,7 +795,7 @@ public class SagePayments implements MerchantServicesProvider {
 				//System.out.println("message="+message);
 			}
 
-			if(!"true".equals(success)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardExpiration.notSuccessful");
+			if(!Boolean.parseBoolean(success)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardExpiration.notSuccessful");
 			if("UNABLE TO LOCATE".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardExpiration.unableToLocate");
 			if(!"SUCCESS".equals(message)) throw new LocalizedIOException(accessor, "MerchantServicesProvider.updateCreditCardExpiration.unexpectedResponse", message);
 		} catch(ServiceException | RemoteException err) {
