@@ -71,7 +71,10 @@ import org.w3c.dom.Node;
  * TODO: Check for test mode and don't allow transaction because test mode not supported (all calls)
  *
  * @author  AO Industries, Inc.
+ *
+ * @deprecated  Support for Sage Payments will be removed in ao-credit-cards-2.0.0
  */
+@Deprecated
 public class SagePayments implements MerchantServicesProvider {
 
 	private static final Logger logger = Logger.getLogger(SagePayments.class.getName());
