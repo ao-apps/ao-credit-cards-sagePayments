@@ -37,7 +37,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-29T19:06:35-0500"
-		dateModified="2020-11-29T07:26:32-06:00"
+		dateModified="2020-12-01T12:29:36-06:00"
 	>
 		<!-- The current snapshot, unreleased version -->
 		<c:set var="version" value="@{com.aoindustries:ao-credit-cards-sagePayments:pom.version}" />
@@ -52,7 +52,11 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 				groupId="@{project.groupId}"
 				artifactId="@{documented.artifactId}"
 				scmUrl="@{project.scm.url}"
-			/>
+			>
+				<ul>
+					<li>Updated dependencies.</li>
+				</ul>
+			</changelog:release>
 		</c:if>
 
 		<changelog:release
