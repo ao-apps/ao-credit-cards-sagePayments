@@ -38,7 +38,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 		<shortTitle>Sage Payment Solutions</shortTitle>
 		<description.html><![CDATA[Provider for the <a target="${javadoc.target}" href="http://www.sage.com/us/sage-payment-solutions">Sage Payment Solutions</a>.]]></description.html>
 		<!-- Dependencies -->
-		<commons-lang3.version>3.11</commons-lang3.version>
+		<commons-lang3.version>3.12.0</commons-lang3.version>
 	</properties>
 
 	<name>AO Credit Cards Sage Payment Solutions</name>
@@ -143,7 +143,7 @@ along with ao-credit-cards-sagePayments.  If not, see <http://www.gnu.org/licens
 								</offlineLink>
 								<!-- Same link for <groupId>org.apache.axis</groupId><artifactId>axis-jaxrpc</artifactId>: <url>https://axis.apache.org/axis/java/apiDocs/</url> -->
 								<offlineLink>
-									<url>https://commons.apache.org/proper/commons-lang/javadocs/api-${commons-lang3.version}/</url>
+									<url>https://javadoc.io/doc/org.apache.commons/commons-lang3/${commons-lang3.version}/</url>
 									<location>${project.build.directory}/offlineLinks/org.apache.commons/commons-lang3</location>
 								</offlineLink>
 								<!-- Test Direct -->
