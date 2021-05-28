@@ -1,13 +1,13 @@
 # [<img src="ao-logo.png" alt="AO Logo" width="35" height="40">](https://github.com/aoindustries) [AO Credit Cards](https://github.com/aoindustries/ao-credit-cards) / [Sage Payment Solutions](https://github.com/aoindustries/ao-credit-cards-sagePayments)
 <p>
-	<a href="https://aoindustries.com/life-cycle#project-old-stable">
-		<img src="https://aoindustries.com/ao-badges/project-old-stable.svg" alt="project: old stable" />
+	<a href="https://aoindustries.com/life-cycle#project-end-of-life">
+		<img src="https://aoindustries.com/ao-badges/project-end-of-life.svg" alt="project: end of life" />
 	</a>
-	<a href="https://aoindustries.com/life-cycle#management-migration">
-		<img src="https://aoindustries.com/ao-badges/management-migration.svg" alt="management: migration" />
+	<a href="https://aoindustries.com/life-cycle#management-cleanup">
+		<img src="https://aoindustries.com/ao-badges/management-cleanup.svg" alt="management: cleanup" />
 	</a>
-	<a href="https://aoindustries.com/life-cycle#packaging-active">
-		<img src="https://aoindustries.com/ao-badges/packaging-active.svg" alt="packaging: active" />
+	<a href="https://aoindustries.com/life-cycle#packaging-unsupported">
+		<img src="https://aoindustries.com/ao-badges/packaging-unsupported.svg" alt="packaging: unsupported" />
 	</a>
 	<br />
 	<a href="https://docs.oracle.com/javase/8/docs/api/">
@@ -22,6 +22,10 @@
 </p>
 
 Provider for [Sage Payment Solutions](http://www.sage.com/us/sage-payment-solutions).
+
+## End of Life
+<strong>This project is end-of-life and is no longer supported.</strong>
+Please [contact us](https://aoindustries.com/contact) if you need this project revived.
 
 ## Project Links
 * [Project Home](https://aoindustries.com/ao-credit-cards/sagePayments/)
